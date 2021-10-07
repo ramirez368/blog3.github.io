@@ -69,7 +69,7 @@ TL;DR: LDAP is a protocol, and Active Directory is a server. LDAP authenticates 
 
 
 ```
-Thank you readers, and wait for Blog 3 next week.
+Thank you readers, and wait for Blog 4 next week.
 For Contact e-mail me at ramirez368@hotmail.com
 
 ```
