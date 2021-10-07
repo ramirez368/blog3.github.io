@@ -7,7 +7,10 @@ layout: default
 
 [//]: #  There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
 
-# Installation of the Apache Server
+# What is LDAP?
+LDAP (Lightweight Directory Access Protocol) is an open and cross platform protocol used for directory services authentication.
+
+LDAP provides the communication language that applications use to communicate with other directory services servers. Directory services store the users, passwords, and computer accounts, and share that information with other entities on the network.
 
 # Prerequisites
 Before you begin this guide, you should have a regular, non-root user with sudo privileges configured on your server. Additionally, you will need to enable a basic firewall to block non-essential ports. You can learn how to configure a regular user account and set up a firewall for your server by following our Initial server setup guide for Ubuntu 20.04.
