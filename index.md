@@ -26,96 +26,21 @@ Active Directory is just one example of a directory service that supports LDAP. 
 
 
 
-### Step 2 — Adjusting the Firewall
-Before testing Apache, it’s necessary to modify the firewall settings to allow outside access to the default web ports. Assuming that you followed the instructions in the prerequisites, you should have a UFW firewall configured to restrict access to your server.
+### LDAP vs. Active Directory
+LDAP is a way of speaking to Active Directory.
 
-During installation, Apache registers itself with UFW to provide a few application profiles that can be used to enable or disable access to Apache through the firewall.
+LDAP is a protocol that many different directory services and access management solutions can understand.
 
-List the ufw application profiles by typing:
-```
-$ sudo ufw app list
-```
-You will receive a list of the application profiles:
-```
-Output
-Available applications:
-  Apache
-  Apache Full
-  Apache Secure
-  OpenSSH
-  ```
-As indicated by the output, there are three profiles available for Apache:
+The relationship between AD and LDAP is much like the relationship between Apache and HTTP:
 
-#### Apache: This profile opens only port 80 (normal, unencrypted web traffic)
-
-#### Apache Full: This profile opens both port 80 (normal, unencrypted web traffic) and port 443 (TLS/SSL encrypted traffic)
-
-#### Apache Secure: This profile opens only port 443 (TLS/SSL encrypted traffic)
-It is recommended that you enable the most restrictive profile that will still allow the traffic you’ve configured. Since we haven’t configured SSL for our server yet in this guide, we will only need to allow traffic on port 80:
- ```
-$ sudo ufw allow 'Apache'
- ```
-You can verify the change by typing:
-```
-$ sudo ufw status
- ```
-The output will provide a list of allowed HTTP traffic:
-```
-Output
-Status: active
-
-To                         Action      From
---                         ------      ----
-OpenSSH                    ALLOW       Anywhere                  
-Apache                     ALLOW       Anywhere                
-OpenSSH (v6)               ALLOW       Anywhere (v6)             
-Apache (v6)                ALLOW       Anywhere (v6)
-As indicated by the output, the profile has been activated to allow access to the Apache web server.
-```
-
-### Step 3 — Checking your Web Server
-At the end of the installation process, Ubuntu 20.04 starts Apache. The web server should already be up and running.
-
-Check with the systemd init system to make sure the service is running by typing:
-```
-$ sudo systemctl status apache2
- ```
- ```
-Output
-● apache2.service - The Apache HTTP Server
-     Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor preset: enabled)
-     Active: active (running) since Thu 2020-04-23 22:36:30 UTC; 20h ago
-       Docs: https://httpd.apache.org/docs/2.4/
-   Main PID: 29435 (apache2)
-      Tasks: 55 (limit: 1137)
-     Memory: 8.0M
-     CGroup: /system.slice/apache2.service
-             ├─29435 /usr/sbin/apache2 -k start
-             ├─29437 /usr/sbin/apache2 -k start
-             └─29438 /usr/sbin/apache2 -k start
-```
-As confirmed by this output, the service has started successfully. However, the best way to test this is to request a page from Apache.
-
-You can access the default Apache landing page to confirm that the software is running properly through your IP address. If you do not know your server’s IP address, you can get it a few different ways from the command line.
-
-Try typing this at your server’s command prompt:
-```
-$ hostname -I
- ```
-You will get back a few addresses separated by spaces. You can try each in your web browser to determine if they work.
-
-Another option is to use the Icanhazip tool, which should give you your public IP address as read from another location on the internet:
-```
-curl -4 icanhazip.com
- ```
-When you have your server’s IP address, enter it into your browser’s address bar:
-```
-http://your_server_ip
-```
-You should see the default Ubuntu 20.04 Apache web page:
+HTTP is a web protocol.
+Apache is a web server that uses the HTTP protocol.
+LDAP is a directory services protocol.
+Active Directory is a directory server that uses the LDAP protocol.
+Occasionally you’ll hear someone say, “We don’t have Active Directory, but we have LDAP.” What they probably mean is that they have another product, such as OpenLDAP, which is an LDAP server.
+It’s kind of like someone saying “We have HTTP” when they really meant “We have an Apache web server.”
 
 
-This page indicates that Apache is working correctly. It also includes some basic information about important Apache files and directory locations.
 
 ![Apache Web Page ](https://assets.digitalocean.com/articles/how-to-install-lamp-ubuntu-16/small_apache_default.png)
 
