@@ -14,20 +14,18 @@ LDAP provides the communication language that applications use to communicate wi
 
 #
 
-## Apache Architecture Diagram:
-![Apache Server Architecture](https://lh3.googleusercontent.com/proxy/IjS__sHCIWwHCTxDLxauQqC7b8uFtDbHNuBzay09VWn1t-5_xZtfQqNWYvzTgwG8M5W0NZqPqn5vWOdfjVn7uyXanAMbXv8_wm8hnfdprO9WSdc1OvVHt0IBlxZFxYd4fzhWeqxk0YuP0fHxLSXDosyxehhF8fQxp4krpjkxog)
+## Ldap Authentication:
+![Ldap Authentication](https://api.softwarekeep.com/media/nimbus/helpcenter/LDAP_Authentification.png)
 
-### Step 1 — Installing Apache
-Apache is available within Ubuntu’s default software repositories, making it possible to install it using conventional package management tools.
+### What is Active Directory?
+Active Directory is a directory services implementation that provides all sorts of functionality like authentication, group and user management, policy administration and more.
 
-Let’s begin by updating the local package index to reflect the latest upstream changes:
+Active Directory (AD) supports both Kerberos and LDAP – Microsoft AD is by far the most common directory services system in use today. AD provides Single-SignOn (SSO) and works well in the office and over VPN. AD and Kerberos are not cross platform, which is one of the reasons companies are implementing access management software to manage logins from many different devices and platforms in a single place. AD does support LDAP, which means it can still be part of your overall access management scheme.
 
-```
-$ sudo apt update
-```
-```
- $ sudo apt install apache2
- ```
+Active Directory is just one example of a directory service that supports LDAP. There are other flavors, too: Red Hat Directory Service, OpenLDAP, Apache Directory Server, and more.
+
+
+
 ### Step 2 — Adjusting the Firewall
 Before testing Apache, it’s necessary to modify the firewall settings to allow outside access to the default web ports. Assuming that you followed the instructions in the prerequisites, you should have a UFW firewall configured to restrict access to your server.
 
