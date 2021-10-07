@@ -12,9 +12,9 @@ LDAP (Lightweight Directory Access Protocol) is an open and cross platform proto
 
 LDAP provides the communication language that applications use to communicate with other directory services servers. Directory services store the users, passwords, and computer accounts, and share that information with other entities on the network.
 
-#
 
-## Ldap Authentication:
+
+## LDAP Authentication:
 ![Ldap Authentication](https://api.softwarekeep.com/media/nimbus/helpcenter/LDAP_Authentification.png)
 
 ### What is Active Directory?
