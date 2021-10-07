@@ -17,9 +17,9 @@ LDAP provides the communication language that applications use to communicate wi
 ## LDAP Authentication:
 ![Ldap Authentication](https://api.softwarekeep.com/media/nimbus/helpcenter/LDAP_Authentification.png)
 
-* Anonymous authentication: Grants client anonymous status to LDAP.
-* Unauthenticated authentication: For logging purposes only, should not grant access to a client.
-* Name/Password authentication: Grants access to the server based on the credentials supplied – simple user/pass authentication is not secure and is not suitable for authentication without confidentiality protection.
+* _Anonymous authentication_: Grants client anonymous status to LDAP.
+* _Unauthenticated authentication_: For logging purposes only, should not grant access to a client.
+* _Name/Password authentication_: Grants access to the server based on the credentials supplied – simple user/pass authentication is not secure and is not suitable for authentication without confidentiality protection.
 
 SASL authentication binds the LDAP server to another authentication mechanism, like Kerberos. The LDAP server uses the LDAP protocol to send an LDAP message to the other authorization service. That initiates a series of challenge response messages that result in either a successful authentication or a failure to authenticate.
 
