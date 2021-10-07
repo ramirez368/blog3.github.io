@@ -3,7 +3,7 @@ layout: default
 ---
 
 
-[A Good Suplemental Video for the Apache Installation](https://www.youtube.com/watch?v=-q8Jj4aAWYw).
+[Ldap and Active Directory how they interact](https://www.youtube.com/watch?v=QyhNaY5O468&t=1s).
 
 [//]: #  There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
 
@@ -12,10 +12,7 @@ LDAP (Lightweight Directory Access Protocol) is an open and cross platform proto
 
 LDAP provides the communication language that applications use to communicate with other directory services servers. Directory services store the users, passwords, and computer accounts, and share that information with other entities on the network.
 
-# Prerequisites
-Before you begin this guide, you should have a regular, non-root user with sudo privileges configured on your server. Additionally, you will need to enable a basic firewall to block non-essential ports. You can learn how to configure a regular user account and set up a firewall for your server by following our Initial server setup guide for Ubuntu 20.04.
-
-When you have an account available, log in as your non-root user to begin.
+#
 
 ## Apache Architecture Diagram:
 ![Apache Server Architecture](https://lh3.googleusercontent.com/proxy/IjS__sHCIWwHCTxDLxauQqC7b8uFtDbHNuBzay09VWn1t-5_xZtfQqNWYvzTgwG8M5W0NZqPqn5vWOdfjVn7uyXanAMbXv8_wm8hnfdprO9WSdc1OvVHt0IBlxZFxYd4fzhWeqxk0YuP0fHxLSXDosyxehhF8fQxp4krpjkxog)
