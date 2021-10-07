@@ -41,16 +41,16 @@ LDAP is a protocol that many different directory services and access management 
 
 The relationship between AD and LDAP is much like the relationship between Apache and HTTP:
 
-HTTP is a web protocol.
-Apache is a web server that uses the HTTP protocol.
-LDAP is a directory services protocol.
-Active Directory is a directory server that uses the LDAP protocol.
+* HTTP is a web protocol.
+* Apache is a web server that uses the HTTP protocol.
+* LDAP is a directory services protocol.
+* Active Directory is a directory server that uses the LDAP protocol.
 Occasionally you’ll hear someone say, “We don’t have Active Directory, but we have LDAP.” What they probably mean is that they have another product, such as OpenLDAP, which is an LDAP server.
 It’s kind of like someone saying “We have HTTP” when they really meant “We have an Apache web server.”
 
 
 
-![Apache Web Page ](https://assets.digitalocean.com/articles/how-to-install-lamp-ubuntu-16/small_apache_default.png)
+![Table with Differences between LDAP and Active Directory ](https://ipwithease.com/wp-content/uploads/2020/06/LDAP-VS-AD-TABLE.jpg)
 
 ### What is an LDAP Query?
 An LDAP query is a command that asks a directory service for some information. For instance, if you’d like to see which groups a particular user is a part of, you’d submit a query that looks like this:
